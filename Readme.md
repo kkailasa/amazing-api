@@ -95,7 +95,7 @@ This operation is used to retrieve all the details specific to an identifier in 
 
 ## Implementation
 
-The requirement to persist a tree like structure into a persistent store has been implemented to be persisted into a RDBMS database. In order to be flexible and to retrieve the data faster Closure table approach has been taken. The database consists of 2 tables. 
+The requirement to persist a tree like structure into a persistent store has been implemented to be persisted into a RDBMS database. In order to be flexible and to retrieve the data faster **Closure table** approach has been taken. The database consists of 2 tables. 
 
 ![Image of ER](https://github.com/kkailasa/amazing-api/blob/master/img/ER.PNG)
 
