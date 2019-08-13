@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    # will build ./docker/web/Dockerfile
+    build: 
+      context : .
+      dockerfile: /docker/web/Dockerfile
+    ports:
+     - "8080:8080"
+    volumes:
+     - .:/code
+  db:
+    # will build ./docker/db/Dockerfile
+    build: ./docker/db
+    ports:
+      - "5432:5432"
