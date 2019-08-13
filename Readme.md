@@ -3,7 +3,7 @@ This project implements the API needed for managing the basic organization data 
 
 ## Getting Started
 
-To clone and run this application, you'll need [Git](https://git-scm.com) , [OpenJDK 11](https://openjdk.java.net/projects/jdk/11/) and [PostgreSQL](https://www.postgresql.org/) 
+To clone the application locally, you'll need [Git](https://git-scm.com)
 
 ```bash
 # Clone this repository
@@ -13,6 +13,19 @@ $ git clone https://github.com/kkailasa/amazing-api
 $ cd amazing-api
 ```
 ### Local Development
+
+To run this application locally,you'll need [OpenJDK 11](https://openjdk.java.net/projects/jdk/11/) and [PostgreSQL](https://www.postgresql.org/)
+
+We will need to create a postgresql database and a user
+
+```bash
+# Create a user 'docker' on postgresql server
+$ $PGBIN/psql --command "CREATE USER docker WITH SUPERUSER PASSWORD 'docker';" 
+
+# Create database
+$ $PGBIN/createdb -O docker docker
+```
+
 Modify the application.properties under src/main/resources to have the correct references to the database hostname, username and password.
 
 ```bash
@@ -23,6 +36,8 @@ $ mvnw clean package
 $ mvnw spring-boot:run
 ```
 ### Docker setup
+To run this application locally,you'll need docker and docker-compose
+
 This project comes with the dockerfiles and docker-compose files for running the services on a docker environment ( DB and Web ). To run the docker images, docker engine and docker-compose are needed.
 
 ```bash
