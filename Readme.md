@@ -38,9 +38,7 @@ $ docker-compose up -d
 Once the application is up and running the API's are exposed to /api/orgdata endpoint. The swagger-ui for the project can be opened at 
 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-<p align="left">
-  <img src="./img/operations-overview.png" alt="Overview" width="650">
-</p>
+![Image of Overview](https://github.com/kkailasa/amazing-api/blob/master/img/operations-overview.PNG)
 
 ### Create new OrgData ( POST /api/orgdata )
 
@@ -84,9 +82,7 @@ This operation is used to retrieve all the details specific to an identifier in 
 
 The requirement to persist a tree like structure into a persistent store has been implemented to be persisted into a RDBMS database. In order to be flexible and to retrieve the data faster Closure table approach has been taken. The database consists of 2 tables. 
 
-<p align="left">
-  <img src="./img/ER.png" alt="ER" width="650">
-</p>
+![Image of ER](https://github.com/kkailasa/amazing-api/blob/master/img/ER.PNG)
 
 The organizationaldatahierarchy is the closure table and is populated/updated by using triggers on the organizationdata table.
 
